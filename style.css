@@ -1,0 +1,370 @@
+li:hover{
+  cursor: pointer;
+  color:  rgb(128, 240, 240);
+ 
+}
+.enog button:hover{
+  background-color: rgb(128, 240, 240);
+  transition: 0.3s;
+  
+}
+.title{
+  text-align: center;
+margin-top: 30px;
+font-size: 15px;
+}
+.title-line {
+ 
+  width:1.5px;
+  height: 32px;
+  background-color: aquamarine;
+  margin: 30px  auto;
+}
+.title dl{
+ letter-spacing: 10px;
+}
+
+/* 
+hamburger(ハンバーガーアイコン)
+=================================== */
+
+
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  z-index: 300;
+  background-color: #000;
+  position: fixed;
+  
+}
+
+.hamburger__line {
+  position: absolute;
+  right: 15px;
+  width: 35px;
+  height: 2px;
+  
+  background-color: rgb(253, 253, 253);
+  transition: all 0.5s;
+}
+
+.hamburger__line--1 {
+  top: 20px;
+}
+
+.hamburger__line--2 {
+  top: 30px;
+}
+
+.hamburger__line--3 {
+  top: 40px;
+}
+
+/*ハンバーガーがクリックされたら*/
+.open .hamburger__line--1 {
+  transform: rotate(-45deg);
+  top: 30px;
+}
+
+.open .hamburger__line--2 {
+  opacity: 0;
+}
+
+.open .hamburger__line--3 {
+  transform: rotate(45deg);
+  top: 30px;
+}
+
+/* 
+sp-nav(ナビ)
+=================================== */
+
+
+.sp-nav {
+  position: fixed;
+  right: -100%;
+  /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+  top: 0;
+  width: 28%;
+  /* 出てくるスライドメニューの幅 */
+  height: 100vh;
+  background-color: #fff;
+  transition: all 1.2s;
+  z-index: 200;
+  overflow-y: auto;
+  /* メニューが多くなったらスクロールできるように */
+}
+
+/*ハンバーガーがクリックされたら右からスライド*/
+.open .sp-nav {
+  right: 0;
+}
+
+
+/* 
+black-bg(ハンバーガーメニュー解除用bg)
+=================================== */
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/*ハンバーガーメニューが開いたら表示*/
+.open .black-bg {
+  opacity: 0.3;
+  visibility: visible;
+}
+.sp-nav ul{
+  margin-top: 100px;
+  text-align: center;
+}
+.sp-nav a{
+  text-decoration: none;
+}
+.sp-nav li{
+  padding: 15px;
+  list-style: none;
+  font-weight: 700;
+}
+
+
+
+
+
+/*  タイトル */
+.titlle h3{
+  text-align: center;
+  font-size: 35px;
+}
+.top-page{
+  display: flex;
+ padding-bottom: 70px;
+}
+
+.top-image img{
+  margin:  auto;
+  width: 900px;
+  margin-left: 50px;
+  animation-name: fade;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+}
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.sb-image img{
+  margin-top: 50px;
+  width: 40%;
+  padding-left: 130px;
+}
+.top-back{
+  
+  background-color: rgb(243, 243, 243);
+  text-align: center;
+  padding-bottom: 60px;
+}
+.top-back p{
+  font-size: 40px; 
+
+}
+.back1{
+  padding-top: 40px;
+ 
+}
+.enog img{
+  margin: 40px 0  20px 0;
+  width: 80%;
+
+
+}
+.enog ul{
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 30px
+}
+.enog p{
+  height: 5px;
+}
+.enog button{
+  padding: 5px 40px;
+background-color: #000;
+color: #fff; 
+border: none;
+
+}
+
+.neko{
+  display: flex;
+  overflow-x:scroll ;
+}
+.neko img{
+  width: 30%;
+  padding: 0 10px;
+ 
+}
+h3{
+  padding:40px 0;
+  text-align: center;
+  font-weight: lighter;
+}
+
+  
+.boro{
+  display: flex;
+  text-align: center;
+  margin-left: 190px;
+}
+.boro-moji {
+  opacity: 0.9;
+  position: relative;
+  margin-bottom: 40px;
+}
+.boro-moji img{
+  width: 250px;
+  padding: 0 5px;
+
+ 
+}
+
+
+.boro-moji p{
+  position: absolute;
+  top:290px;
+  left: 50px;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.news{
+  background-color: rgb(243, 243, 243);
+  text-align: center;
+}
+.items{
+
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+
+ 
+}
+
+
+.item 
+ {
+  width:300px;
+  margin: 0 5px 30px 5px ;
+ 
+  
+  padding: 33px 5px;
+  border: solid 1px black;
+}
+.new button{
+margin: 30px 0px;
+  padding: 5px 40px;
+  background-color: #000;
+  color: #fff; 
+  border: none;
+ 
+}
+.new button:hover{
+  background-color: rgb(128, 240, 240);
+  transition: 0.3s;
+  opacity: 0.8;
+}
+footer{
+  background-color: #000;
+  color: #fff;
+}
+iframe{
+  margin-left: 200px;
+  margin-top :100px
+}
+.text{
+display: flex;
+}
+.text dl{
+  margin: 100px ;
+}
+dt{
+  margin: 5px 0;
+}
+.boro-moji{
+  overflow:hidden; 
+}
+.boro-moji img{
+  transition: 1s all;
+
+}
+
+.boro-moji  :hover{
+  transform:scale(1.1,1.1);
+  transition:1s all;
+}
+
+.ani{
+  opacity: 0;
+  transition: opacity 3s;
+
+}
+.ani.show{
+  opacity: 1;
+}
+
+body {
+  margin:0;
+  padding: 0;
+}
+.loading {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 120vh;
+  margin: 0;
+  padding: 0;
+  background: #333333;
+}
+.loading.hide {
+  position: absolute;
+  top:0;
+  opacity: 0;
+ 
+  pointer-events: none;
+  transition: opacity 500ms;
+}
+.loading .circle {
+  display: block;
+  position: relative;
+  top: calc( 50% - 20px );
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 7px solid #444444;
+  border-top: 7px solid #5ae1e5;
+  border-radius: 50px;
+  animation: loading 700ms linear 0ms infinite normal both;
+}
+@keyframes loading {
+  0% { transform: rotate( 0deg ); }
+  100% { transform: rotate( 360deg ); }
+}
+
